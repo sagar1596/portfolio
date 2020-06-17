@@ -4,7 +4,7 @@ import './navigation.styles.scss';
 import { Navbar, Nav } from 'react-bootstrap';
 
 const Navigation = () => (
-    <Navbar collapseOnSelect fixed="top" expand="lg" bg="custom" variant="dark">
+    <Navbar className="header" collapseOnSelect fixed="top" expand="lg" bg="custom" variant="dark">
         <Navbar.Brand href="#home">Sagar Bhat</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

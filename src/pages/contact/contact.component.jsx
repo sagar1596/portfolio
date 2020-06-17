@@ -58,7 +58,7 @@ class ContactPage extends React.Component {
         window.emailjs.send(
           'gmail', templateId,
           variables
-          )
+          ).then(() => alert("Feedback Submitted Successfully"))
           // Handle errors here however you like, or use a React error boundary
           .catch(err => console.error('Email Send Failed:', err))
       }

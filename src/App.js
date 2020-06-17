@@ -30,16 +30,10 @@ class App extends React.Component {
 
     this.handleContactMeClick = this.handleContactMeClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
-    this.doThatThang = this.doThatThang.bind(this);
 
   }
 
   handleScroll(e) {
-      _.throttle(this.doThatThang, 100);
-    
-  }
-
-  doThatThang() {
     let fromTop = window.scrollY;
 
     this.mainNavLinks.forEach(link => {
@@ -54,10 +48,11 @@ class App extends React.Component {
         link.classList.remove("active");
       }
     });
+    
   }
 
   componentDidMount() {
-    this.mainNavLinks = document.querySelectorAll(".navbar .navbar-nav a");
+    this.mainNavLinks = document.querySelectorAll(".header.navbar .navbar-nav a");
     window.addEventListener('scroll', this.handleScroll);
   }
 
