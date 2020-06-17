@@ -1,0 +1,24 @@
+.navbar {
+    &.bg-custom {
+        background-color: #000;
+        color: #fff;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &.navbar-expand-lg {
+        .navbar-nav {
+            flex-direction: row;
+
+            .nav-link {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+
+}

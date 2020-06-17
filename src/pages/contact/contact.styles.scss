@@ -1,0 +1,19 @@
+
+.contact {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #171616;
+        flex-direction: column;
+        justify-content: center;
+
+        .contact-form {
+                > div {
+                        > input[type='text'] {
+                                display: inline-block;
+                                width: 50%;
+                        }
+                }
+        } 
+    
+}

@@ -1,0 +1,39 @@
+@-webkit-keyframes fadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyframes fadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.homepage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #171616;
+    
+    
+        .bg-custom {
+            background-color: #171616;
+            border: none;
+            flex: 1;
+            align-items: center;
+
+            .card-text {
+                text-align: center;
+                margin-bottom: 2.5em;
+
+                > div {
+                    font-size: 2em;
+                    
+                    .name {
+                        color: rgba(229, 241, 255, 0.5);
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+    
+}
