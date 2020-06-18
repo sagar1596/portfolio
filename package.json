@@ -16,7 +16,8 @@
     "react-dom": "^16.13.1",
     "react-google-charts": "^3.0.15",
     "react-reveal": "^1.2.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-scroll-to-component": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

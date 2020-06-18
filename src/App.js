@@ -3,6 +3,8 @@ import "bootstrap/scss/bootstrap.scss";
 import './App.css';
 import 'react-bootstrap';
 
+import scrollToComponent from 'react-scroll-to-component';
+
 import Navigation from './components/navigation/navigation.component';
 import HomePage from './pages/homepage/homepage.component';
 import ProfessionalPage from './pages/professional/professional.component';
