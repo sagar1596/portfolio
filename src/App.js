@@ -1,8 +1,6 @@
 import React from 'react';
 import "bootstrap/scss/bootstrap.scss";
 import './App.css';
-import _ from 'lodash';
-import scrollToComponent from 'react-scroll-to-component';
 import 'react-bootstrap';
 
 import Navigation from './components/navigation/navigation.component';
