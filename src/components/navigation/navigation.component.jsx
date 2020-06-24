@@ -1,6 +1,6 @@
 import React from 'react';
 import './navigation.styles.scss';
-
+import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 
 const Navigation = () => (
@@ -12,16 +12,23 @@ const Navigation = () => (
                 
             </Nav>
             <Nav>
-                <Nav.Link className="active" href="#home">Home</Nav.Link>
-                <Nav.Link href="#exp">Experience</Nav.Link>
-                <Nav.Link href="#skills">Skills</Nav.Link>
-                <Nav.Link href="#work">Work</Nav.Link>
-                <Nav.Link href="#contact">Contact Me</Nav.Link>
+                <Link onClick={_handleClick} className="nav-link active" to="/">Home</Link>
+                <Link onClick={_handleClick} className="nav-link" to="/professional">Experience</Link>
+                <Link onClick={_handleClick} className="nav-link" to="/skills">Skills</Link>
+                <Link onClick={_handleClick} className="nav-link" to="/work">Work</Link>
+                <Link onClick={_handleClick} className="nav-link" to="/about">Contact Me</Link>
             </Nav>
             
         </Navbar.Collapse>
     </Navbar>
 )
+
+const _handleClick = (e) => {
+    Array.from(e.target.parentElement.children).forEach((el) => {
+        el.classList.remove('active');
+    })
+    e.target.classList.add("active");
+}
 
 export default Navigation;
 

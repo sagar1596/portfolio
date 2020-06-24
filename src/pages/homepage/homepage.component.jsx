@@ -10,7 +10,7 @@ import CustomButton from '../../components/custom-button/custom-button.component
 
 const HomePage = (props) => (
             <div id="home" className="homepage page">
-                <Card className="bg-custom text-white p-4">
+                <Card className="bg-custom text-black p-4">
                     <div className="card-text">
                         <LightSpeed left cascade duration={2000}>
                             <div>

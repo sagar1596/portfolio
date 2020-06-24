@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import App from './App';
-
+import { BrowserRouter } from 'react-router-dom';
 import '../node_modules/@fortawesome/fontawesome-free/js/all';
 import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 
@@ -11,7 +11,9 @@ import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <App />,
+  <BrowserRouter>
+    <App />
+    </BrowserRouter>,
   document.getElementById('root')
 );
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import "bootstrap/scss/bootstrap.scss";
-import './App.css';
+import './App.scss';
 import 'react-bootstrap';
 
 import scrollToComponent from 'react-scroll-to-component';
+
+import { Switch, Route } from 'react-router-dom';
 
 import Navigation from './components/navigation/navigation.component';
 import HomePage from './pages/homepage/homepage.component';
@@ -25,6 +27,8 @@ class App extends React.Component {
     this._skillsPage = React.createRef();
     this._workPage = React.createRef();
     this._contactPage = React.createRef();
+
+    this._scrollPos = 0;
     
     this.mainNavLinks = null;
 
@@ -34,26 +38,34 @@ class App extends React.Component {
   }
 
   handleScroll(e) {
-    let fromTop = window.scrollY;
+    // let fromTop = window.scrollY;
 
-    this.mainNavLinks.forEach(link => {
-      let section = document.querySelector(link.hash);
+    // this.mainNavLinks.forEach(link => {
+    //   let section = document.querySelector(link.hash);
 
-      if (
-        section.offsetTop <= fromTop &&
-        section.offsetTop + section.offsetHeight > fromTop
-      ) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
+    //   if (
+    //     section.offsetTop <= fromTop &&
+    //     section.offsetTop + section.offsetHeight > fromTop
+    //   ) {
+    //     link.classList.add("active");
+    //   } else {
+    //     link.classList.remove("active");
+    //   }
+    // });
+
+    if ((document.body.getBoundingClientRect()).top > this._scrollPos) {
+        console.log("UP");
+    } else {
+        console.log("DOWN");
+    }
+      // saves the new position for iteration.
+      this._scrollPos = (document.body.getBoundingClientRect()).top;
     
   }
 
   componentDidMount() {
     this.mainNavLinks = document.querySelectorAll(".header.navbar .navbar-nav a");
-    window.addEventListener('scroll', this.handleScroll);
+    document.addEventListener('scroll', this.handleScroll);
   }
 
   handleContactMeClick() {
@@ -65,8 +77,14 @@ class App extends React.Component {
     return (
       <>
         <Navigation />
-
-          <div ref={this._homePage} className="home-container">
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/professional" component={ProfessionalPage} />
+          <Route path="/skills" component={SkillsPage} />
+          <Route path="/work" component={WorkPage} />
+          <Route path="/about" component={ContactPage} />
+        </Switch>
+          {/* <div ref={this._homePage} className="home-container active">
             <HomePage _handleContactClick={this.handleContactMeClick} />
           </div>
 
@@ -84,7 +102,7 @@ class App extends React.Component {
 
           <div ref={this._contactPage} className="about-container">
             <ContactPage />
-          </div>
+          </div> */}
 
           <Footer />
         
