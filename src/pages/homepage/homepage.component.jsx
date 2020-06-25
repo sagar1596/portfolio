@@ -1,5 +1,8 @@
 import React from 'react';
 import './homepage.styles.scss';
+
+import MetaTags from  'react-meta-tags';
+
 import { HOMEPAGE_TEXT } from './homepage.data';
 
 import { Card } from 'react-bootstrap';
@@ -8,8 +11,17 @@ import { LightSpeed, Zoom } from 'react-reveal';
 import CustomButton from '../../components/custom-button/custom-button.component';
 
 
-const HomePage = (props) => (
+class HomePage extends React.Component  {
+
+
+    render() {
+        return (
             <div id="home" className="homepage page">
+                <MetaTags>
+                    <title>Homepage - Sagar Bhat</title>
+                    <meta name="description" content="Homepage - This is a portfolio site developed by and for Sagar Bhat." />
+                    <meta property="og:title" content="Homepage" />
+                </MetaTags>
                 <Card className="bg-custom text-black p-4">
                     <div className="card-text">
                         <LightSpeed left cascade duration={2000}>
@@ -21,11 +33,14 @@ const HomePage = (props) => (
                         </LightSpeed>
                     </div>
                     <Zoom delay={2000} duration={1000}>
-                        <CustomButton onClick={props._handleContactClick}>Contact Me</CustomButton>
+                        <CustomButton onClick={() => {}}>Contact Me</CustomButton>
                     </Zoom>
                 </Card>
             </div>
         )
+    }
+    
+}
 
 
 export default HomePage;

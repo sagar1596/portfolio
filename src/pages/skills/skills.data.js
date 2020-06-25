@@ -30,9 +30,5 @@ export const SKILL_DATA = [
     {
         type: "Python",
         level: 40
-    },
-    {
-        type: "UI Design",
-        level: 50
     }
 ] 

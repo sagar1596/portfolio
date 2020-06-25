@@ -48,10 +48,6 @@ class App extends React.Component {
     
   }
 
-  componentDidMount() {
-    // this.mainNavLinks = document.querySelectorAll(".header.navbar .navbar-nav a");
-    // document.addEventListener('scroll', this.handleScroll);
-  }
 
   handleContactMeClick() {
     scrollToComponent(this._contactPage.current);
@@ -65,7 +61,7 @@ class App extends React.Component {
       </Switch>
       <Switch>
         
-          <Route exact path="/" component={HomePage} />
+          <Route  exact path="/" component={HomePage} />
           <Route path="/professional" component={ProfessionalPage} />
           <Route path="/skills" component={SkillsPage} />
           <Route path="/work" component={WorkPage} />

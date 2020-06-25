@@ -1,5 +1,6 @@
 import React from 'react';
 import './contact.styles.scss';
+import MetaTags from 'react-meta-tags';
 import { Fade, Zoom } from 'react-reveal';
 
 import CustomButton from '../../components/custom-button/custom-button.component';
@@ -15,7 +16,13 @@ class ContactPage extends React.Component {
 
     render() {
         return (
+            
             <div id="contact" className="contact page">
+                <MetaTags>
+                    <title>Contact Me - Sagar Bhat</title>
+                    <meta name="description" content="Contact Me - This is a Contact page to get in touch with Sagar." />
+                    <meta property="og:title" content="Contact" />
+                </MetaTags>
                 <Fade bottom>
                     <h2>Contact Me</h2>
                 </Fade>
