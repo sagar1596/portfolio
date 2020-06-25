@@ -1,8 +1,18 @@
 import React from 'react';
 import './skills.styles.scss';
 import { SKILL_DATA } from './skills.data';
+import SkillBar from 'react-skillbars';
 import { Fade } from 'react-reveal';
 
+const colors = {
+    bar: '#948a8a',
+    title: {
+      text: '#fff',
+      fontWeight : 300,
+      fontSize: '1.3em',
+      background: '#000'
+    }
+  }
 
 const SkillsPage = () => (
     <div id="skills" className="skills page">
@@ -11,19 +21,7 @@ const SkillsPage = () => (
         </Fade>
 
         <div className="skill-bar">
-        
-            {
-                SKILL_DATA.map((item) => (
-                    <Fade key={item.id} bottom duration={500}>
-                        <div className="skill-container" >
-                            <p>{item.skill}</p>
-                            <Fade left>
-                                <div className="skills" style={{width: `${item.per}`}}>{item.per}</div>
-                            </Fade>
-                        </div>
-                    </Fade>
-                ))
-            }
+            <SkillBar skills={SKILL_DATA} colors={colors} />
         </div>
     </div>
 );

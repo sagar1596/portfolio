@@ -3,16 +3,24 @@
         width: 100%;
         display: flex;
         align-items: center;
-        background-color: #171616;
+        background-color: #fff;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 6rem;
 
         .contact-form {
                 > div {
                         > input[type='text'] {
                                 display: inline-block;
                                 width: 50%;
+                                border: 1px solid #000;
+                                border-bottom: none;
                         }
+                        textarea {
+                                resize: none;
+                                border: 1px solid #000;
+                        }
+                    
                 }
         } 
     

@@ -11,7 +11,7 @@ const WorkPage = () => (
         <Fade bottom>
             <h2>Work</h2>
         </Fade>
-        <Card style={{width: '85%'}}>
+        <Card style={{width: '73%'}}>
             <Zoom>
                 <div className="image-container">
                     <Card.Img variant="top" src={Site} />

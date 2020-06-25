@@ -3,24 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
 html {
-  height: 100%;
-    overflow: auto;
+  overflow: auto;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .page {
   height: auto;
-  overflow: auto;
   min-height: 100vh;
 }
 
 .page h2 {
   margin: 0 0 2em;
-  color: #fff;
+  color: #000;
 }
 
 .code {

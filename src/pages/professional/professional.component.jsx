@@ -1,6 +1,5 @@
 import React from 'react';
 import './professional.styles.scss';
-// import { Chart } from "react-google-charts"; // To remove
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import { Fade } from 'react-reveal';
 

@@ -1,37 +1,38 @@
 export const SKILL_DATA = [
     {
-        id: 1,
-        skill: "CSS",
-        per: "90%"
+        type: "HTML",
+        level: 80
     },
     {
-        id: 2,
-        skill: "HTML",
-        per: "80%"
+        type: "CSS",
+        level: 70
     },
     {
-        id: 3,
-        skill: "Javascript",
-        per: "70%"
+        type: "Javascript",
+        level: 80
     },
     {
-        id: 4,
-        skill: "NodeJS",
-        per: "60%"
+        type: "NodeJS",
+        level: 60
     },
     {
-        id: 5,
-        skill: "React",
-        per: "65%"
+        type: "ReactJS",
+        level: 65
     },
     {
-        id: 6,
-        skill: "AngularJS",
-        per: "45%"
+        type: "Angular",
+        level: 45
     },
     {
-        id: 7,
-        skill: "UI Design",
-        per: "50%"
+        type: "Firebase",
+        level: 35
+    },
+    {
+        type: "Python",
+        level: 40
+    },
+    {
+        type: "UI Design",
+        level: 50
     }
 ] 

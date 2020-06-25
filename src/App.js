@@ -38,21 +38,6 @@ class App extends React.Component {
   }
 
   handleScroll(e) {
-    // let fromTop = window.scrollY;
-
-    // this.mainNavLinks.forEach(link => {
-    //   let section = document.querySelector(link.hash);
-
-    //   if (
-    //     section.offsetTop <= fromTop &&
-    //     section.offsetTop + section.offsetHeight > fromTop
-    //   ) {
-    //     link.classList.add("active");
-    //   } else {
-    //     link.classList.remove("active");
-    //   }
-    // });
-
     if ((document.body.getBoundingClientRect()).top > this._scrollPos) {
         console.log("UP");
     } else {
@@ -64,8 +49,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.mainNavLinks = document.querySelectorAll(".header.navbar .navbar-nav a");
-    document.addEventListener('scroll', this.handleScroll);
+    // this.mainNavLinks = document.querySelectorAll(".header.navbar .navbar-nav a");
+    // document.addEventListener('scroll', this.handleScroll);
   }
 
   handleContactMeClick() {
@@ -73,38 +58,20 @@ class App extends React.Component {
   }
 
   render() {
-
     return (
       <>
+      <Switch>
         <Navigation />
-        <Switch>
+      </Switch>
+      <Switch>
+        
           <Route exact path="/" component={HomePage} />
           <Route path="/professional" component={ProfessionalPage} />
           <Route path="/skills" component={SkillsPage} />
           <Route path="/work" component={WorkPage} />
           <Route path="/about" component={ContactPage} />
         </Switch>
-          {/* <div ref={this._homePage} className="home-container active">
-            <HomePage _handleContactClick={this.handleContactMeClick} />
-          </div>
-
-          <div ref={this._professionalPage} className="professional-container">
-            <ProfessionalPage />
-          </div>
-
-          <div ref={this._skillsPage} className="skills-container">
-            <SkillsPage />
-          </div>
-
-          <div ref={this._workPage} className="work-container">
-            <WorkPage />
-          </div>
-
-          <div ref={this._contactPage} className="about-container">
-            <ContactPage />
-          </div> */}
-
-          <Footer />
+        <Footer />
         
         </>
     );
