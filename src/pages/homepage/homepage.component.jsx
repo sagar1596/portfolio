@@ -13,7 +13,10 @@ import CustomButton from '../../components/custom-button/custom-button.component
 
 class HomePage extends React.Component  {
 
-
+    constructor(props) {
+        super(props);
+        this.props = props;
+    }
     render() {
         return (
             <div id="home" className="homepage page">
@@ -33,7 +36,7 @@ class HomePage extends React.Component  {
                         </LightSpeed>
                     </div>
                     <Zoom delay={2000} duration={1000}>
-                        <CustomButton onClick={() => {}}>Contact Me</CustomButton>
+                        <CustomButton onClick={() => this.props.history.push({pathname: "/about"})}>Contact Me</CustomButton>
                     </Zoom>
                 </Card>
             </div>
